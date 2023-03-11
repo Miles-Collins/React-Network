@@ -1,0 +1,46 @@
+.postImg {
+  height: 55vh;
+  width: 100%;
+  
+  object-fit: cover;
+  object-position: center;
+  padding: 0px;
+}
+
+.postAvatar {
+  height: 7.5vh;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  padding: 0px;
+}
+
+body{ 
+  background-color: rgb(24, 25, 26);
+}
+
+.cardBody {
+  background-color: rgb(36, 37, 38);
+  border-radius: 2%;
+  color: white;
+}
+
+.buttonColor {
+  color: #b0b3b8;
+  cursor:pointer;
+}
+
+.buttonColor:hover {
+  // text-shadow: 1px 0px 4px #cbcdd2;
+  background-color: #48484a;
+  border-radius: 50%;
+}
+
+.textWeight {
+  font-weight: 200;
+}
+
+.marginRight {
+  padding-inline: 0px;
+}

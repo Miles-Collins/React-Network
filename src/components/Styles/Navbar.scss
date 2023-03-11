@@ -1,0 +1,39 @@
+.background{
+  background-color: #242526;
+  border-bottom:1px solid #393a3b;
+  height: 7vh;
+}
+
+.backgroundDark {
+  background-color: #3a3b3c;
+  border: none !important;
+}
+
+.borderLeft {
+  border-top-left-radius: 50% !important;
+  border-bottom-left-radius: 50% !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+// .borderRight {
+//   border-top-left-radius: 0% !important;
+//   border-bottom-left-radius: 0% !important;
+//   border-top-right-radius: 5% !important;
+//   border-bottom-right-radius: 5% !important;
+// }
+
+.fontColor {
+  color: #b0b3b8;
+}
+
+input::placeholder {
+  opacity: 1 !important;
+  font-weight: 245;
+  color: #b0b3b8 !important;
+}
+
+.inputPadding {
+  padding-left: 0px !important;
+}
+
