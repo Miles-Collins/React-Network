@@ -11,6 +11,8 @@ class ObservableAppState {
   nextPage = null;
   previousPage = null;
 
+  time = "";
+
   constructor() {
     makeAutoObservable(this);
   }
