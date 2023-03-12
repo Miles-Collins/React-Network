@@ -59,6 +59,7 @@ export function HomePage() {
               <p className="m-0 m-2">What's on your mind?</p>
             </div>
           </div>
+
           {/* <CommentForm /> */}
           <div className="row d-flex justify-content-center">{posts}</div>
         </div>
