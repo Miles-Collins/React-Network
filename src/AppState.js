@@ -5,13 +5,15 @@ class ObservableAppState {
   user = null;
   /** @type {import('./models/Account.js').Account|null} */
   account = null;
+  /** @type {import('./models/Profile.js').Profile|null} */
+  profile = null;
 
   /** @type {import('./models/Post.js').Post[]} */
   posts = [];
   nextPage = null;
   previousPage = null;
-
   time = "";
+  photoBool = false;
 
   constructor() {
     makeAutoObservable(this);

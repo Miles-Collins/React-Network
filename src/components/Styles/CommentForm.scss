@@ -8,6 +8,16 @@ textarea{
   overflow:hidden;
 }
 
+.inputForm{
+  background-color: #252526 !important;
+  border: none !important;
+  outline: none !important;
+  color: #b0b3b8 !important;
+  font-size: large !important;
+  resize: none;
+  overflow:hidden;
+}
+
 .postButton {
   background-color: #505151;
   color: #828c8c;
@@ -19,4 +29,24 @@ textarea{
   border-color: inherit;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+
+button {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+}
+
+.addToPost {
+  border: 1px solid #505151;
+}
+
+.newColor {
+  color: lightsteelblue;
+  cursor: pointer;
+}
+
+.newColor:hover {
+  opacity: .8;
+  transition: .3s;
 }

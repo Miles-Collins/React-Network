@@ -29,6 +29,8 @@ body{
 .buttonColor {
   color: #b0b3b8;
   cursor:pointer;
+  height: 35px;
+  width: 35px;
 }
 
 .buttonColor:hover {
@@ -44,3 +46,8 @@ body{
 .marginRight {
   padding-inline: 0px;
 }
+
+// .borderRadius{
+//   height: 50px;
+//   width: 50px;
+// }
