@@ -1,0 +1,59 @@
+.coverImg {
+  height: 50VH;
+  width: 100%;
+  object-fit: cover;
+}
+
+.movement {
+  top: -40px;
+  position: relative;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border: 5px solid #252526;
+}
+
+.icon {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+}
+
+.bgProfile {
+  background: rgb(37, 37, 38);
+  background: linear-gradient(360deg, rgba(37, 37, 38, 1) 36%, rgba(62, 62, 62, 1) 64%, rgba(196, 196, 196, 1) 100%);
+}
+
+.graduated {
+  z-index: 1000;
+  position: absolute;
+  top: 45%;
+  right: 15%;
+  font-size: 2rem;
+  border-radius: 50%;
+  background-color: #414144;
+  border: 3px #252526 solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pleaseWork {
+  height: 50px;
+  width: 50px;
+}
+
+.parent {
+  position: relative;
+}
+
+.downArrow {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.165);
+  font-size: 75px;
+}
+
+.downArrow:hover {
+  color: rgba(255, 255, 255, 0.466);
+}

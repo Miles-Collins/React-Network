@@ -11,6 +11,12 @@ import "./Styles/PostCard.scss";
 export default function PostCard({ post }) {
   async function remove() {
     try {
+      const yes = await Pop.confirm(
+        `Are you sure you want to delete this post ${post.creator.name}?`
+      );
+      if (!yes) {
+        return;
+      }
       await postsService.delete(post.id);
     } catch (error) {
       logger.error("[ERROR]", error);

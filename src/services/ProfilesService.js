@@ -1,4 +1,5 @@
 import { AppState } from "../AppState";
+import { Post } from "../models/Post";
 import { Profile } from "../models/Profile";
 import { logger } from "../utils/Logger";
 import { api } from "./AxiosService";
@@ -14,7 +15,7 @@ class ProfilesService {
   async getPost(profileId) {
     const res = await api.get(`api/profiles/${profileId}/posts`);
     logger.log("getPost  res:", res.data);
-    AppState.posts = res.data;
+    AppState.posts = res.data.posts.map((post) => new Post(post));
   }
 
   async profileQuery(query) {
