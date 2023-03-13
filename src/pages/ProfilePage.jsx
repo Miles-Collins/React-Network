@@ -7,6 +7,7 @@ import Pop from "../utils/Pop";
 import "../components/Styles/ProfilePage.scss";
 import PostCard from "../components/PostCard";
 import { App } from "../App";
+import ProfileCard from "../components/ProfileCard";
 
 export function profilePage() {
   useEffect(() => {
@@ -21,7 +22,7 @@ export function profilePage() {
   let posts = AppState.posts.map((post) => {
     return (
       <div className="col-md-12" key={post.id}>
-        <PostCard post={post} />
+        <ProfileCard post={post} />
       </div>
     );
   });

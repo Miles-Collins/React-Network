@@ -8,7 +8,7 @@ export function App() {
       <header>
         <Navbar />
       </header>
-      z
+
       <main>
         <Outlet />
       </main>

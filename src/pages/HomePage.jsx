@@ -8,6 +8,7 @@ import { postsService } from "../services/PostsService";
 import Pop from "../utils/Pop";
 import "../components/Styles/HomePage.scss";
 import { logger } from "../utils/Logger";
+import LeftBar from "../components/LeftBar";
 
 export function HomePage() {
   useEffect(() => {
@@ -42,8 +43,15 @@ export function HomePage() {
   return (
     <div className="container-fluid">
       <div className="row">
-        <div className="col-1 col-md-3 col-lg-4"></div>
-        <div className="col-sm-10 col-md-6 col-lg-4">
+        {/* SECTION LEFT ROW */}
+
+        <div className="col-1 col-md-3 col-lg-3">
+          <LeftBar />
+        </div>
+
+        {/* SECTION MIDDLE ROW */}
+
+        <div className="col-sm-10 col-md-6 col-lg-5 justify-content mx-auto">
           <div className="row fillerRow"></div>
           <div className="row d-flex align-items-center my-3">
             <div className="col-3 col-sm-3 col-md-1 p-0">
@@ -63,9 +71,14 @@ export function HomePage() {
           {/* <CommentForm /> */}
           <div className="row d-flex justify-content-center">{posts}</div>
         </div>
-        <div className="col-1 col-md-3 col-lg-4"></div>
+        <div className="col-1 col-md-3 col-lg-3"></div>
       </div>
 
+      {/* SECTION RIGHT ROW */}
+
+      <div className="col-1 col-md-3 col-lg-4"></div>
+
+      {/* SECTION MODAL */}
       <div
         className="modal fade "
         id="postModal"

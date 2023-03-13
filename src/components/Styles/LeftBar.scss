@@ -1,0 +1,38 @@
+.profileImage {
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.interact {
+  cursor: pointer
+}
+
+.interact:hover {
+  background-color: #232425;
+}
+
+.youtube {
+  color: #FF0000;
+}
+
+.instagram {
+  color: transparent;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.news {
+  color: grey;
+}
+
+.marketplace {
+  background: -webkit-linear-gradient(rgb(142, 142, 206), blue, rgb(127, 127, 199));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
