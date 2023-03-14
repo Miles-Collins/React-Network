@@ -91,7 +91,7 @@ export function profilePage() {
       </div>
 
       <div className="row justify-content-center">
-        <div className="col-8 col-md-6 col-lg-4 justify-content-center">
+        <div className="col-8 col-md-6 col-lg-5 mx-auto justify-content-center">
           <div className="row">{posts}</div>
         </div>
       </div>

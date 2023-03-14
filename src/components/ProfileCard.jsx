@@ -29,7 +29,7 @@ export default function ProfileCard({ post }) {
       {/* AVATAR */}
       <div className="col-12">
         <div className="row d-flex align-items-center">
-          <div className="col-2 my-2">
+          <div className="col-1 my-2">
             <img className="postAvatar" src={post.creator.picture} alt="" />
           </div>
           <div className="col-5 align-items-center">
