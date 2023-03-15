@@ -9,6 +9,7 @@ import Pop from "../utils/Pop";
 import "../components/Styles/HomePage.scss";
 import { logger } from "../utils/Logger";
 import LeftBar from "../components/LeftBar";
+import { Spotify } from "react-spotify-embed";
 
 export function HomePage() {
   useEffect(() => {
@@ -52,7 +53,10 @@ export function HomePage() {
         {/* SECTION MIDDLE ROW */}
 
         <div className="col-sm-10 col-md-6 col-lg-5 justify-content mx-auto">
-          <div className="row fillerRow"></div>
+          <div className="row my-5">
+            <Spotify link="https://open.spotify.com/album/0fUy6IdLHDpGNwavIlhEsl?si=mTiITmlHQpaGkoivGTv8Jw" />
+          </div>
+          {/* <div className="row fillerRow"></div> */}
           <div className="row d-flex align-items-center my-3">
             <div className="col-3 col-sm-3 col-md-1 p-0">
               <div className="avatarPicture">
@@ -67,7 +71,6 @@ export function HomePage() {
               <p className="m-0 m-2">What's on your mind?</p>
             </div>
           </div>
-
           {/* <CommentForm /> */}
           <div className="row d-flex justify-content-center">{posts}</div>
         </div>
