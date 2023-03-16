@@ -46,6 +46,63 @@ export function profilePage() {
     }
   }
 
+  function graduated() {
+    if (profile?.graduated == true) {
+      return (
+        <div
+          title="Graduated"
+          className="pleaseWork   graduated text-light mdi mdi-school-outline"
+        ></div>
+      );
+    }
+  }
+
+  function gitHub() {
+    logger.log(profile);
+    if (profile?.github != "") {
+      return (
+        <a href={profile?.github}>
+          {" "}
+          <img
+            className="icon mx-2"
+            src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+            alt=""
+          />
+        </a>
+      );
+    }
+  }
+
+  function linkedIn() {
+    if (profile?.linkedin != "") {
+      return (
+        <a href={profile?.linkedin}>
+          {" "}
+          <img
+            className="icon mx-2"
+            src="https://openvisualfx.com/wp-content/uploads/2019/10/linkedin-icon-logo-png-transparent.png"
+            alt=""
+          />
+        </a>
+      );
+    }
+  }
+
+  function resume() {
+    if (profile?.resume != "") {
+      return (
+        <a href={profile?.resume}>
+          {" "}
+          <img
+            className="icon mx-2"
+            src="https://www.freeiconspng.com/thumbs/resume-icon-png/resume-icon-png-15.png"
+            alt=""
+          />
+        </a>
+      );
+    }
+  }
+
   return (
     <div className="container-fluid">
       <div className="bgProfile mb-5">
@@ -57,35 +114,39 @@ export function profilePage() {
         <div className="row">
           <div className="col-2 offset-2 parent">
             <img className="movement parent" src={profile?.picture} alt="" />
-            <div className="pleaseWork   graduated text-light mdi mdi-school-outline"></div>
+            {graduated()}
+            {/* <div className="pleaseWork   graduated text-light mdi mdi-school-outline"></div> */}
           </div>
 
           <div className="col-5 px-0 mx-0">
             <h1 className="text-light mt-4">{profile?.name}</h1>
-            <a href={profile?.github}>
+            {gitHub()}
+            {linkedIn()}
+            {resume()}
+            {/* <a href={profile?.github}>
               {" "}
               <img
                 className="icon mx-2"
                 src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
                 alt=""
               />
-            </a>
-            <a href={profile?.linkedin}>
+            </a> */}
+            {/* <a href={profile?.linkedin}>
               {" "}
               <img
                 className="icon mx-2"
                 src="https://openvisualfx.com/wp-content/uploads/2019/10/linkedin-icon-logo-png-transparent.png"
                 alt=""
               />
-            </a>
-            <a href={profile?.resume}>
+            </a> */}
+            {/* <a href={profile?.resume}>
               {" "}
               <img
                 className="icon mx-2"
                 src="https://www.freeiconspng.com/thumbs/resume-icon-png/resume-icon-png-15.png"
                 alt=""
               />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

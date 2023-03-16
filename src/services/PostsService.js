@@ -36,6 +36,17 @@ class PostsService {
 
   // LIKES \\
 
+  async likePost(postId) {
+    logger.log("LIKING THIS POST");
+    const res = await api.post(`api/posts/${postId}/like`);
+    logger.log("likePost  res:", res.data);
+    let index = AppState.posts.findIndex((p) => p.id == postId);
+    logger.log("likePost  index:", index);
+    let post = new Post(res.data);
+    logger.log("likePost  post:", post);
+    AppState.posts.splice(index, 1, post);
+  }
+
   // SEARCH \\
 
   async search(query) {
