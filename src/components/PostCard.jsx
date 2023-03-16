@@ -67,52 +67,59 @@ export default function PostCard({ post }) {
   function likes() {
     if (post.likeIds.includes(account?.id)) {
       return (
-        <div className="col-2 my-2">
-          <i className="text-primary selectable mdi mdi-thumb-up-outline"></i>
-          <span className="text-primary"> {post.likeIds.length}</span>
+        <div className="row d-flex align-items-center">
+          <div className="col-2 my-2">
+            <i className="text-primary mdi mdi-thumb-up-outline"></i>
+            <span className="text-primary"> {post.likeIds.length}</span>
+          </div>
         </div>
       );
     } else {
       return (
-        <div className="col-2 my-2">
-          <i className=" selectable mdi mdi-thumb-up-outline"></i>
-          <span className=""> {post.likeIds.length}</span>
+        <div className="row d-flex align-items-center">
+          <div className="col-2 my-2">
+            <i className="greyColor mdi mdi-thumb-up-outline"></i>
+            <span className="greyColor"> {post.likeIds.length}</span>
+          </div>
         </div>
       );
     }
   }
 
   function likePostButton() {
-    debugger;
     if (post.likeIds.includes(account?.id)) {
       return (
-        <div className="row my-3">
-          <div
-            onClick={() => likePost()}
-            className="col-5 mx-auto fs-5 text-center"
-          >
-            <i className="selectable text-primary mdi mdi-thumb-up"></i>
-            <span className="selectable text-primary"> Like</span>
-          </div>
-          <div className="col-5 fs-5 text-center">
-            <i className="mdi mdi-comment-outline"></i>
-            <span> Comment</span>
+        <div className="container">
+          <div className="row  mx-auto borderComment">
+            <div
+              onClick={() => likePost()}
+              className="d-flex justify-content-center align-items-center rounded likeButton py-2 col-6 mx-auto fs-5 my-1 text-center"
+            >
+              <i className="text-primary mdi mdi-thumb-up"></i>
+              <span className="ms-2 text-primary"> Like</span>
+            </div>
+            <div className="d-flex justify-content-center align-items-center likeButton py-2 rounded col-6 fs-5 my-1 text-center">
+              <i className="mdi mdi-comment-outline"></i>
+              <span className="ms-2"> Comment</span>
+            </div>
           </div>
         </div>
       );
     } else {
       return (
-        <div className="row my-3">
-          <div
-            onClick={() => likePost()}
-            className=" col-5 mx-auto fs-5 text-center"
-          >
-            <i className="selectable mdi mdi-thumb-up"></i>
-            <span className="selectable"> Like</span>
-          </div>
-          <div className="col-5 fs-5 text-center">
-            <i className="mdi mdi-comment-outline"></i>
-            <span> Comment</span>
+        <div className="container">
+          <div className="row  borderComment mx-auto">
+            <div
+              onClick={() => likePost()}
+              className="d-flex justify-content-center align-items-center rounded likeButton py-2 col-6 mx-auto fs-5 my-1 text-center"
+            >
+              <i className=" mdi mdi-thumb-up"></i>
+              <span className="ms-2"> Like</span>
+            </div>
+            <div className="d-flex justify-content-center align-items-center rounded likeButton py-2  col-6 fs-5 my-1 text-center">
+              <i className="mdi mdi-comment-outline"></i>
+              <span className="ms-2"> Comment</span>
+            </div>
           </div>
         </div>
       );
@@ -158,7 +165,7 @@ export default function PostCard({ post }) {
         />
       </div>
       {/* LIKES COUNT */}
-      <div className="row">{likes()}</div>
+      {likes()}
       {/* LIKES BAR/FAKE COMMENT CLICK */}
       {likePostButton()}
       {/* FAKE COMMENT FORM INPUT */}

@@ -51,3 +51,22 @@ body{
 //   height: 50px;
 //   width: 50px;
 // }
+
+.greyColor {
+  color: #b0b3b8;
+}
+
+.likeButton {
+  color: #b0b3b8;
+}
+
+.likeButton:hover {
+  cursor: pointer !important;
+  opacity: .75;
+  background-color: #48484a;
+}
+
+.borderComment {
+  border-top: 1px solid #3e4042;
+  border-bottom: 1px solid #3e4042;
+}
