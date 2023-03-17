@@ -90,7 +90,7 @@ export default function PostCard({ post }) {
     if (post.likeIds.includes(account?.id)) {
       return (
         <div className="container">
-          <div className="row  mx-auto borderComment">
+          <div className="row mb-2 mx-auto borderComment">
             <div
               onClick={() => likePost()}
               className="d-flex justify-content-center align-items-center rounded likeButton py-2 col-6 mx-auto fs-5 my-1 text-center"
@@ -108,7 +108,7 @@ export default function PostCard({ post }) {
     } else {
       return (
         <div className="container">
-          <div className="row  borderComment mx-auto">
+          <div className="row mb-2 borderComment mx-auto">
             <div
               onClick={() => likePost()}
               className="d-flex justify-content-center align-items-center rounded likeButton py-2 col-6 mx-auto fs-5 my-1 text-center"

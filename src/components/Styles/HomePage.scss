@@ -38,3 +38,20 @@
 .modal-header{
   border-color: #2f3031 !important;
 }
+
+.middleRow {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 92vh;
+}
+
+.middleRow::-webkit-scrollbar {
+  width: 4px;
+  height: 75vh;
+  background-color: #18191a;
+  border-radius: 50%;
+}
+
+.middleRow::-webkit-scrollbar-thumb {
+  background: #424244;
+}

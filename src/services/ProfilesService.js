@@ -22,6 +22,15 @@ class ProfilesService {
     const res = await api.get(`api/profiles?query=${query}`);
     logger.log("profileQuery  res:", res.data);
   }
+
+  async getAll() {
+    const res = await api.get("api/profiles?query=a");
+    logger.log("getAll  res:", res.data);
+    AppState.allProfiles = res.data.map((profile) => new Profile(profile));
+    logger.log("getAll  AppState.allProfiles:", AppState.allProfiles);
+    AppState.allProfiles.filter((profile) => profile.bio == undefined);
+    logger.log("[FILTERED PROFILES]", AppState.allProfiles);
+  }
 }
 
 export const profilesService = new ProfilesService();

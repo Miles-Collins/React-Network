@@ -2,8 +2,8 @@
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
-  height: 40px;
-  width: 40px;
+  height: 35px;
+  width: 35px;
   cursor: pointer;
 }
 
@@ -35,4 +35,8 @@
   background: -webkit-linear-gradient(rgb(142, 142, 206), blue, rgb(127, 127, 199));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.newFontSize {
+  font-size: .85rem;
 }

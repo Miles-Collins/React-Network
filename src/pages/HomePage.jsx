@@ -10,10 +10,12 @@ import "../components/Styles/HomePage.scss";
 import { logger } from "../utils/Logger";
 import LeftBar from "../components/LeftBar";
 import { Spotify } from "react-spotify-embed";
+import { profilesService } from "../services/ProfilesService";
 
 export function HomePage() {
   useEffect(() => {
     getPost();
+    getAllProfiles();
   }, []);
 
   let posts = AppState.posts.map((post) => {
@@ -41,18 +43,27 @@ export function HomePage() {
     }
   }
 
+  async function getAllProfiles() {
+    try {
+      await profilesService.getAll();
+    } catch (error) {
+      logger.error("[ERROR]", error);
+      Pop.error("[ERROR]", error.message);
+    }
+  }
+
   return (
     <div className="container-fluid">
       <div className="row">
         {/* SECTION LEFT ROW */}
 
-        <div className="col-1 col-md-3 col-lg-3">
+        <div className="d-none d-md-block col-md-3 col-lg-3">
           <LeftBar />
         </div>
 
         {/* SECTION MIDDLE ROW */}
 
-        <div className="col-sm-10 col-md-6 col-lg-5 justify-content mx-auto">
+        <div className="col-sm-10 col-md-6 col-lg-5 justify-content mx-auto middleRow">
           <div className="row my-5">
             <Spotify link="https://open.spotify.com/album/0fUy6IdLHDpGNwavIlhEsl?si=mTiITmlHQpaGkoivGTv8Jw" />
           </div>
@@ -64,7 +75,7 @@ export function HomePage() {
               </div>
             </div>
             <div
-              className="col-10 col-sm-10 col-md-11 p-0 rounded-pill backgroundPost"
+              className="col-12 col-sm-12 col-md-11 p-0 rounded-pill backgroundPost"
               data-bs-toggle="modal"
               data-bs-target="#postModal"
             >
@@ -74,7 +85,7 @@ export function HomePage() {
           {/* <CommentForm /> */}
           <div className="row d-flex justify-content-center">{posts}</div>
         </div>
-        <div className="col-1 col-md-3 col-lg-3"></div>
+        <div className="d-none d-md-block col-md-3 col-lg-3"></div>
       </div>
 
       {/* SECTION RIGHT ROW */}

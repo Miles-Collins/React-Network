@@ -7,7 +7,8 @@ class ObservableAppState {
   account = null;
   /** @type {import('./models/Profile.js').Profile|null} */
   profile = null;
-
+  /** @type {import('./models/Profile.js').Profile|[]} */
+  allProfiles = [];
   /** @type {import('./models/Post.js').Post[]} */
   posts = [];
   nextPage = null;
