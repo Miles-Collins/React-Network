@@ -122,7 +122,7 @@ export default function LeftBar() {
           </div>
         </div>
 
-        <div className="col-12 mt-2">
+        {/* <div className="col-12 mt-2">
           <div className="row interact d-flex align-items-center rounded">
             <div className="col-2">
               <i className="news fs-2 interact mdi mdi-newspaper"></i>
@@ -153,7 +153,7 @@ export default function LeftBar() {
               <p className="p-0 m-0 newFontSize">Instagram</p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

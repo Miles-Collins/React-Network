@@ -11,11 +11,11 @@ import { logger } from "../utils/Logger";
 import LeftBar from "../components/LeftBar";
 import { Spotify } from "react-spotify-embed";
 import { profilesService } from "../services/ProfilesService";
+import RightBar from "../components/RightBar";
 
 export function HomePage() {
   useEffect(() => {
     getPost();
-    getAllProfiles();
   }, []);
 
   let posts = AppState.posts.map((post) => {
@@ -43,14 +43,14 @@ export function HomePage() {
     }
   }
 
-  async function getAllProfiles() {
-    try {
-      await profilesService.getAll();
-    } catch (error) {
-      logger.error("[ERROR]", error);
-      Pop.error("[ERROR]", error.message);
-    }
-  }
+  // async function getAllProfiles() {
+  //   try {
+  //     await profilesService.getAll();
+  //   } catch (error) {
+  //     logger.error("[ERROR]", error);
+  //     Pop.error("[ERROR]", error.message);
+  //   }
+  // }
 
   return (
     <div className="container-fluid">
@@ -85,12 +85,13 @@ export function HomePage() {
           {/* <CommentForm /> */}
           <div className="row d-flex justify-content-center">{posts}</div>
         </div>
-        <div className="d-none d-md-block col-md-3 col-lg-3"></div>
+
+        {/* SECTION RIGHT ROW */}
+
+        <div className="d-none d-md-block col-md-3 col-lg-3 rightBarPadding">
+          <RightBar />
+        </div>
       </div>
-
-      {/* SECTION RIGHT ROW */}
-
-      <div className="col-1 col-md-3 col-lg-4"></div>
 
       {/* SECTION MODAL */}
       <div

@@ -1,8 +1,12 @@
+import { App } from "../App";
 import { AppState } from "../AppState";
 import { Post } from "../models/Post";
 import { Profile } from "../models/Profile";
 import { logger } from "../utils/Logger";
 import { api } from "./AxiosService";
+
+const randomProfile = "abcdefghijklmnopqrstuvwxyz".split("");
+const profileNumber = Math.round(Math.random() * randomProfile.length);
 
 class ProfilesService {
   // TODO MAKE MODEL FOR PROFILE
@@ -24,11 +28,20 @@ class ProfilesService {
   }
 
   async getAll() {
-    const res = await api.get("api/profiles?query=a");
+    console.log(randomProfile[profileNumber], "Random Letter");
+    const res = await api.get(
+      `api/profiles?query=${randomProfile[profileNumber]}`
+    );
     logger.log("getAll  res:", res.data);
     AppState.allProfiles = res.data.map((profile) => new Profile(profile));
     logger.log("getAll  AppState.allProfiles:", AppState.allProfiles);
-    AppState.allProfiles.filter((profile) => profile.bio == undefined);
+    AppState.allProfiles = AppState.allProfiles.filter(
+      (p) => p.bio != undefined
+    );
+    AppState.allProfiles = AppState.allProfiles.filter((p) => p.bio != "");
+    AppState.allProfiles.forEach((profile) => {
+      // console.log(profile.bio);
+    });
     logger.log("[FILTERED PROFILES]", AppState.allProfiles);
   }
 }

@@ -67,6 +67,7 @@ export function profilePage() {
             className="icon mx-2"
             src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
             alt=""
+            title="GitHub"
           />
         </a>
       );
@@ -82,6 +83,7 @@ export function profilePage() {
             className="icon mx-2"
             src="https://openvisualfx.com/wp-content/uploads/2019/10/linkedin-icon-logo-png-transparent.png"
             alt=""
+            title="LinkedIn"
           />
         </a>
       );
@@ -97,6 +99,7 @@ export function profilePage() {
             className="icon mx-2"
             src="https://www.freeiconspng.com/thumbs/resume-icon-png/resume-icon-png-15.png"
             alt=""
+            title={`${profile?.name}, Resume`}
           />
         </a>
       );

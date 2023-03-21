@@ -1,0 +1,31 @@
+.contactAvatar {
+  height: 2.2rem;
+  width: 2.2rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  padding: 0px;
+  opacity: .3;
+}
+
+.interact {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.interact:hover {
+  background-color: #232425;
+}
+
+.contactsFont {
+  color: #b0b3b8;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0px;
+  margin: 0px
+}
+
+.contactProfileName {
+  color: #696b6e;
+  font-size: .95rem;
+}
