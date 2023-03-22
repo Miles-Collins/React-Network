@@ -64,11 +64,18 @@ export function HomePage() {
         {/* SECTION MIDDLE ROW */}
 
         <div className="col-sm-10 col-md-6 col-lg-5 justify-content mx-auto middleRow">
-          <div className="row my-5">
-            <Spotify link="https://open.spotify.com/album/0fUy6IdLHDpGNwavIlhEsl?si=mTiITmlHQpaGkoivGTv8Jw" />
+          <div className="row my-5 spotify rounded d-flex justify-content-center text-light">
+            <div className="col-12 d-flex justify-content-center my-2">
+              <h3 className="border-bottom">Your Daily Mix</h3>
+            </div>
+            <Spotify
+              className="p-1"
+              link="https://open.spotify.com/playlist/37i9dQZF1E3a3SZtwgkfb1"
+            />
           </div>
+          <div className="col-12"></div>
           {/* <div className="row fillerRow"></div> */}
-          <div className="row d-flex align-items-center my-3">
+          <div className="row d-flex align-items-center my-3 whatsOnYourMind p-3 rounded">
             <div className="col-3 col-sm-3 col-md-1 p-0">
               <div className="avatarPicture">
                 <img className="avatarPicture" src={account?.picture} />

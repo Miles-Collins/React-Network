@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { AppState } from "../AppState";
 import "../components/Styles/LeftBar.scss";
 
@@ -11,11 +12,13 @@ export default function LeftBar() {
         <div className="col-12">
           <div className="row interact d-flex align-items-center rounded">
             <div className="col-2">
-              <img
-                className="profileImage my-1 p-0"
-                src={account?.picture}
-                alt=""
-              />
+              <Link to={`profile/${account?.id}`}>
+                <img
+                  className="profileImage my-1 p-0"
+                  src={account?.picture}
+                  alt=""
+                />
+              </Link>
             </div>
             <div className="col-9 p-0 ">
               <p className="p-0 m-0 newFontSize">{account?.name}</p>
