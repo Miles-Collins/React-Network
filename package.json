@@ -11,7 +11,6 @@
   "dependencies": {
     "@bcwdev/auth0provider-client": "^0.0.13",
     "@mdi/font": "^7.1.96",
-    "@sweetalert2/theme-dark": "^5.0.15",
     "axios": "^1.2.6",
     "bootstrap": "^5.2.3",
     "mobx": "^6.7.0",

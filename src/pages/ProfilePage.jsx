@@ -112,6 +112,7 @@ export function profilePage() {
         <div className="row d-flex justify-content-center">
           <div className="col-10">
             <img className="coverImg" src={profile?.coverImg} alt="" />
+            <i className="fs-2 text-dark mdi mdi-pencil-outline"></i>
           </div>
         </div>
         <div className="row">

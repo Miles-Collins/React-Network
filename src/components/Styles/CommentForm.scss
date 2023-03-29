@@ -9,17 +9,22 @@ textarea{
 }
 
 .inputForm{
-  background-color: #252526 !important;
+  background-color: #333334 !important;
   border: none !important;
   outline: none !important;
   color: #b0b3b8 !important;
   font-size: large !important;
   resize: none;
   overflow:hidden;
+  
 }
 
+// .inputForm:hover{
+//   background-color: #252526 !important; 
+// }
+
 .postButton {
-  background-color: #505151;
+  background-color: #505151 ;
   color: #828c8c;
 }
 
@@ -50,3 +55,7 @@ button {
   opacity: .8;
   transition: .3s;
 }
+
+.editFontSize {
+  font-size: .9rem !important;
+} 

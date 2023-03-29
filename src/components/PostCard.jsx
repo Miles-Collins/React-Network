@@ -11,6 +11,9 @@ import "./Styles/PostCard.scss";
 /**@param {{post:Post}} props */
 export default function PostCard({ post }) {
   let account = AppState.account;
+  let likesName = post.likes.map((post) => {
+    return post.name;
+  }, []);
   async function remove() {
     try {
       const yes = await Pop.confirm(
@@ -69,7 +72,10 @@ export default function PostCard({ post }) {
       return (
         <div className="row d-flex align-items-center">
           <div className="col-2 my-2">
-            <i className="text-primary mdi mdi-thumb-up-outline"></i>
+            <i
+              title={likesName}
+              className="text-primary mdi mdi-thumb-up-outline"
+            ></i>
             <span className="text-primary"> {post.likeIds.length}</span>
           </div>
         </div>
